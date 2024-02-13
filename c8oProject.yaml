@@ -23,7 +23,7 @@
     
     # How to notify special events
     
-    The library also provides a **NotifyAevent** SharedAction to let you notify special events to Google Analytics 4  Just call this SharedAction anywhere in your application providing the **EventType* and **EventData** variables. You can have documenttation of the various G4 event types [here](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag) 
+    The library also provides a **NotifyAevent** SharedAction to let you notify special events to Google Analytics 4  Just call this SharedAction anywhere in your application providing the **EventType** and **EventData** variables. You can have documenttation of the various G4 event types [here](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag) 
     
     # Sample App
     
