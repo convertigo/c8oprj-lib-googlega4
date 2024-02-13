@@ -60,6 +60,40 @@ title: First page
   beanData: '{"ionBean":"Content"}'
   comment: Page content
   tagName: ion-content
+  ↓Button [ngx.components.UIDynamicElement-1707847954839]: 
+    beanData: '{"ionBean":"Button"}'
+    tagName: ion-button
+    ↓Label [ngx.components.UIDynamicElement-1707847954834]: 
+      beanData: '{"ionBean":"Label"}'
+      tagName: ion-label
+      ↓some_text [ngx.components.UIText-1707847954836]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:Test Event
+    ↓attr [ngx.components.UIControlEvent-1707847954838]: 
+      ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1707847978928]: 
+        beanData: '{"ionBean":"InvokeAction"}'
+        stack: lib_GoogleGA4.Application.NgxApp.NotifyEvent
+        tagName: InvokeSharedAction
+        ↓EventName [ngx.components.UIControlVariable-1707847989482]: 
+          comment: The Event Name see https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag for a list of standard GA4 event names.
+          varValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:MyCustomEvent
+        ↓EventData [ngx.components.UIControlVariable-1707847989484]: 
+          comment: The event data see https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag the data needed for each EventTypes. Data has to be JSON.
+          varValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: |
+                  'script:{
+                  	param1: ''param1'',
+                  	param2: ''param2'',
+                  	param3: ''param3''
+                  }
+                  '
 ↓Footer [ngx.components.UIDynamicElement-1491634242460]: 
   beanData: '{"ionBean":"Footer"}'
   comment: Page footer

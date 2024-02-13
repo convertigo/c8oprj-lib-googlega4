@@ -20,7 +20,7 @@ comment: Call this when you want to notify a special event
     varValue: 
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-        - MobileSmartSourceType: plain:Params.EventData
+        - MobileSmartSourceType: script:params.EventData
 ↓EventName [ngx.components.UIStackVariable-1707812122108]: 
   comment: The Event Name see https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag for a list of standard GA4 event names.
 ↓EventData [ngx.components.UIStackVariable-1707812141230]: 

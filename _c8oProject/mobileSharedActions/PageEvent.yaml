@@ -12,5 +12,5 @@ comment: Must be called when a Page changes. The best way to call this is within
             			''screen_name'' : event.pageName
           		});
           		
-          		resolve();
+          		resolve(true);
           '
