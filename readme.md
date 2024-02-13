@@ -56,13 +56,13 @@ For more technical informations : [documentation](./project.md)
      <tr><td>To contribute</td><td>
 
      ```
-     lib_GoogleGA4=/Users/olivierpicciotto/wrks/lib_GoogleGA4/.git:branch=master
+     lib_GoogleGA4=https://github.com/convertigo/c8oprj-lib-googlega4.git:branch=master
      ```
      </td></tr>
      <tr><td>To simply use</td><td>
 
      ```
-     lib_GoogleGA4=/Users/olivierpicciotto/wrks/lib_GoogleGA4//archive/master.zip
+     lib_GoogleGA4=https://github.com/convertigo/c8oprj-lib-googlega4/archive/master.zip
      ```
      </td></tr>
     </table>
@@ -102,10 +102,10 @@ Call this when you want to notify a special event
 <th>name</th><th>comment</th>
 </tr>
 <tr>
-<td>EventData</td><td></td>
+<td>EventData</td><td>The event data see https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag the data needed for each EventTypes. Data has to be JSON.</td>
 </tr>
 <tr>
-<td>EventName</td><td></td>
+<td>EventName</td><td>The Event Name see https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag for a list of standard GA4 event names.</td>
 </tr>
 </table>
 

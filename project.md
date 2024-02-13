@@ -138,7 +138,7 @@ comment
 <img src="https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/ngx/components/images/uistackvariable_16x16.png?raw=true "  alt="UIStackVariable" >&nbsp;EventData
 </td>
 <td>
-
+The event data see https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag the data needed for each EventTypes. Data has to be JSON.
 </td>
 </tr>
 <tr>
@@ -146,7 +146,7 @@ comment
 <img src="https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/ngx/components/images/uistackvariable_16x16.png?raw=true "  alt="UIStackVariable" >&nbsp;EventName
 </td>
 <td>
-
+The Event Name see https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag for a list of standard GA4 event names.
 </td>
 </tr>
 </table>
