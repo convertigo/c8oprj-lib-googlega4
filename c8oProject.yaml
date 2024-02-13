@@ -1,6 +1,34 @@
 ↑convertigo: 8.1.0.m006
 ↓lib_GoogleGA4 [core.Project]: 
-  comment: Convertigo NGX builder Project
+  comment: |
+    'This library connects your application with Google Analytics 4. It provides a set of SharedActions you can use in your project.
+    
+    ## How to use
+    
+    Install the library, and call the **InstallGA4** SharedAction in your application. The best place to call it is in a **[onNetWorkReachable](https://doc.convertigo.com/documentation/latest/reference-manual/convertigo-objects/mobile-application/components/control-components/appevent/)** Application Event. In this way the GA4 analytics will be installed when your application starts.
+    
+    This shared Action will require à **Measurement ID** you will find in you Google Analytics Console **Data streams**. A **Measurement ID** is in the form of **G-XXXXXXXXXX**. You can pass this id in the **G_ID** variable.
+    
+    ## How to track visited pages
+    
+    The library provides a **PageEvent** sharedAction you can use to Track visited pages of your app. The best place to call it is in an **[AppGuard](https://doc.convertigo.com/documentation/latest/reference-manual/convertigo-objects/mobile-application/ngx-components/control-components/appguard/)** Application Event
+    
+    This way way each time a user navigates on page the **AppGuard** event will be triggered and your sharedAction will be called. 
+    
+    Note:  To be sure that you page will be entered correctly do not forget to add a **[CustomAction](https://doc.convertigo.com/documentation/latest/reference-manual/convertigo-objects/mobile-application/components/action-components/customaction/)** after calling the **PageEvent** SharedAction with a 
+    
+    `return true`
+    
+    JavaScript line to instruct the AppGuard to let the user navigate on the page.. 
+    
+    # How to notify special events
+    
+    The library also provides a **NotifyAevent** SharedAction to let you notify special events to Google Analytics 4  Just call this SharedAction anywhere in your application providing the **EventType* and **EventData** variables. You can have documenttation of the various G4 event types [here](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag) 
+    
+    # Sample App
+    
+    You will find in this project a Sample Application using these shared actions for reference.
+    '
   corsOrigin: =Origin
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
   ↓Project_reference [references.ProjectSchemaReference]: 

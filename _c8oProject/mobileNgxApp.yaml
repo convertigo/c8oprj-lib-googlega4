@@ -64,7 +64,12 @@ componentScriptContent:
         '
 tplProjectName: mobilebuilder_tpl_8_1_0_ngx
 ↓Menu [ngx.components.UIDynamicMenu-1500890597895]: 🗏 mobileMenus/Menu.yaml
+↓InstallGA4 [ngx.components.UIActionStack-1707737013084]: 🗏 mobileSharedActions/InstallGA4.yaml
+↓PageEvent [ngx.components.UIActionStack-1707755181709]: 🗏 mobileSharedActions/PageEvent.yaml
+↓NotifyEvent [ngx.components.UIActionStack-1707811699220]: 🗏 mobileSharedActions/NotifyEvent.yaml
 ↓Page [ngx.components.PageComponent-1500538678074]: 🗏 mobilePages/Page.yaml
+↓Page1 [ngx.components.PageComponent-1707751281731]: 🗏 mobilePages/Page1.yaml
+↓Page2 [ngx.components.PageComponent-1707751292222]: 🗏 mobilePages/Page2.yaml
 ↓Style [ngx.components.UIStyle-1491635462437]: 
   comment: You can add some global application styles here
   styleContent: 
@@ -446,3 +451,28 @@ tplProjectName: mobilebuilder_tpl_8_1_0_ngx
           /** Ionic CSS Variables **/
           
           
+↓AppEvent [ngx.components.UIAppEvent-1707737051300]: 
+  appEvent: onNetworkReachable
+  ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1707737070624]: 
+    beanData: '{"ionBean":"InvokeAction"}'
+    stack: lib_GoogleGA4.Application.NgxApp.InstallGA4
+    tagName: InvokeSharedAction
+    ↓G_ID [ngx.components.UIControlVariable-1707751872986]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: plain:G-GFY5YEFJE8
+↓AppGuard [ngx.components.UIAppGuard-1707755136879]: 
+  ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1707755565506]: 
+    beanData: '{"ionBean":"InvokeAction"}'
+    stack: lib_GoogleGA4.Application.NgxApp.PageEvent
+    tagName: InvokeSharedAction
+  ↓ReturnOK [ngx.components.UICustomAction-1707755872890]: 
+    actionValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+        - com.twinsoft.convertigo.beans.common.FormatedContent: 
+          →: |
+            '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+            		resolve(true);
+            '

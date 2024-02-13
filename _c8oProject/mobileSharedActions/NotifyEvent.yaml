@@ -1,0 +1,25 @@
+comment: Call this when you want to notify a special event
+↓NotifyEvent [ngx.components.UICustomAction-1707811699224]: 
+  actionValue: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+        →: |
+          '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+          		
+          		gtag(''event'', vars.Event, vars.Data);
+          		
+          		resolve();
+          '
+  ↓Event [ngx.components.UIControlVariable-1707812024954]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:params.EventName
+  ↓Data [ngx.components.UIControlVariable-1707812092769]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: plain:Params.EventData
+↓EventName [ngx.components.UIStackVariable-1707812122108]: 
+↓EventData [ngx.components.UIStackVariable-1707812141230]: 

@@ -1,0 +1,16 @@
+comment: Must be called when a Page changes. The best way to call this is within a **onCanActivate** AppGuard event
+↓PageEvent [ngx.components.UICustomAction-1707756763166]: 
+  actionValue: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+        →: |
+          '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+          		
+          		gtag(''event'', ''screen_view'', {
+            			''app_name'': ''myAppName'',
+            			''screen_name'' : event.pageName
+          		});
+          		
+          		resolve();
+          '

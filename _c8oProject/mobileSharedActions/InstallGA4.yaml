@@ -1,0 +1,62 @@
+comment: |
+  Installs the Google analytics client side. Must be called when the app Starts.
+  
+↓InitGA4 [ngx.components.UICustomAction-1707736843522]: 
+  actionValue: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+        →: |
+          '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+          		
+          		if (vars.G_ID == undefined)
+          			page.c8o.log.error(''[gtag] ''+ ''G_ID is not defined, please use a G-XXXXX measurement protocol ID'');
+          		else {		
+          			install(vars.G_ID)
+          			gtag(''config'', {
+          				send_page_view : false
+          			})
+          		}
+          		
+          		gtag(''event'', ''Convertigo gTag Installed'', {
+          			time: Date.now()	
+          		})
+          		
+          		resolve();
+          '
+  package_dependencies: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: ga-gtag
+            - java.lang.String: 
+              - ↑value: 1.2.0
+  page_ts_imports: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: gtag
+            - java.lang.String: 
+              - ↑value: ga-gtag
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: install
+            - java.lang.String: 
+              - ↑value: ga-gtag
+  ↓G_ID [ngx.components.UIControlVariable-1707751935338]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:params.G_ID
+↓G_ID [ngx.components.UIStackVariable-1707751846433]: 
+  comment: The MeasurementID found in GA4 console in the form of G-XXXXXXXXXX
